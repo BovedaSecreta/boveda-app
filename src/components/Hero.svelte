@@ -12,13 +12,13 @@
 			desempeño profesional de la disciplina.
 		</p>
 		<div class="flex gap-4 flex-col md:flex-row">
-		<!-- <button
+		<button
 			data-tally-open="wdbPAK"
 			data-tally-overlay="1"
 			data-tally-emoji-text="👋"
 			data-tally-emoji-animation="wave"
 			class="btn mt-2 btn-primary hover:scale-105">Me quiero inscribir</button
-		> -->
+		>
 		<a href="/#blocks"
 			class="btn mt-2 btn-primary btn-outline">Más información</a
 		>
