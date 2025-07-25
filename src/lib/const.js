@@ -54,6 +54,12 @@ export let coaches = [
     },
 ];
 
+// Sumar un bloque Intermedio al día Sábado, 
+// la distribución de bloques quedaría de la siguiente manera:
+// Bloque Básico 10:00 a 11:30 hrs
+// Bloque Intermedio 11:35 a 13:05 hrs
+// Bloque Avanzado 13:30 a 15:00 hrs
+
 export const horarios = [
     {
         bloque: 'Bloque Básico',
@@ -73,7 +79,7 @@ export const horarios = [
             },
             {
                 dia: 'Sábado',
-                hora: '11:00 a 12:30 hrs'
+                hora: '10:00 a 11:30 hrs'
             },
         ]
     },
@@ -88,7 +94,11 @@ export const horarios = [
             {
                 dia: 'Jueves',
                 hora: '18:00 a 19:30 hrs'
-            }
+            },
+            {
+                dia: 'Sábado',
+                hora: '11:35 a 13:05 hrs'
+            },
         ]
     },
     {
@@ -105,10 +115,20 @@ export const horarios = [
             },
             {
                 dia: 'Sábado',
-                hora: '13:00 a 14:30 hrs'
+                hora: '13:30 a 15:00 hrs'
             }
         ]
-    }
+    },
+    {
+        bloque: 'Master Class',
+        profesor: 'Zatara, Owen y Mauri',
+        horarios: [
+            {
+                dia: 'Viernes',
+                hora: '11:00 a 12:30 hrs'
+            },
+        ]
+    },
 ];
 
 export const blocks = [
