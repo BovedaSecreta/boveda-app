@@ -9,7 +9,7 @@
         <OctagonAlert size={64} />
 		<div>
 			<h2 class="font-bold text-lg uppercase text-pretty ">Los entrenamientos se están realizando con normalidad.</h2>
-            <p class="text-lg mt-2 text-pretty">Última actualización: Jueves 24 de Julio, 2025</p>
+            <p class="text-lg mt-2 text-pretty">Última actualización: Martes 07 de Octubre, 2025</p>
 		</div>
 	</div>
 </div>

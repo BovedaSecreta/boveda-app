@@ -70,7 +70,7 @@
 					data-tally-open="wdbPAK"
 					data-tally-overlay="1"
 					data-tally-emoji-text="👋"
-					data-tally-emoji-animation="wave">Incripción</button
+					data-tally-emoji-animation="wave">Inscripción</button
 				>
 			</nav>
 		</div>
