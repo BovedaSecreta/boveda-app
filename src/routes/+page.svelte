@@ -37,7 +37,7 @@
 	<section class="relative">
 		<Hero />
 		<div
-			class="absolute md:w-8/12 lg:w-6/12 -bottom-40 md:-bottom-16 right-[50%] translate-x-[50%] w-full z-20"
+			class="absolute md:w-8/12 lg:w-6/12 -bottom-20 md:-bottom-16 right-[50%] translate-x-[50%] w-full z-20"
 		>
 			<Callout />
 		</div>
