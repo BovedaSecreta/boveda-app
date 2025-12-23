@@ -58,13 +58,13 @@
 				>
 				<a class="btn btn-link font-ibm font-black text-xl italic normal-case" href="/#faq">FAQ</a>
 
-				<!-- <button
+				<button
 					class="btn text-terciary font-ibm font-black text-xl italic normal-case"
 					data-tally-open="wdbPAK"
 					data-tally-overlay="1"
 					data-tally-emoji-text="👋"
 					data-tally-emoji-animation="wave">Incripción</button
-				> -->
+				>
 			</nav>
 		</div>
 	</div>
