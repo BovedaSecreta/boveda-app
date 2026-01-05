@@ -10,7 +10,11 @@
 		<div class="text-center md:text-left">
 			<h2 class="font-bold text-lg text-pretty">¡Atención!</h2>
 			<p>Los entrenamientos se están realizando con normalidad.</p>
-			<p class="text-sm text-pretty">Última actualización: 23 de dic., 2025</p>
+			<p class="text-sm text-pretty">
+				Última actualización: <span
+					class="underline decoration-wavy decoration-purple-500 font-bold">05 de ene., 2026</span
+				>
+			</p>
 		</div>
 	</div>
 </div>
