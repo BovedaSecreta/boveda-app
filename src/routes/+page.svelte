@@ -14,6 +14,7 @@
 	import { coaches, horarios, blocks } from '../lib/const.js';
 	import Whatsapp from '../components/Whatsapp.svelte';
 	import Nav from '../components/Nav.svelte';
+	import Timeline from '../components/Timeline.svelte';
 
 	const activeCoaches = coaches.filter((coach) => coach.status);
 
@@ -42,7 +43,11 @@
 			<Callout />
 		</div>
 	</section>
-	<div id="blocks" class="container mx-auto my-6 mt-48 md:mt-28 scroll-mt-32">
+	<section class="container mx-auto p-4 mt-32 flex content-center flex-col">
+		<h2 class="text-3xl font-bold mb-8 text-center">Fechas especiales 2026</h2>
+		<Timeline />
+	</section>
+	<div id="blocks" class="container mx-auto my-6 mt-10 md:mt-28 scroll-mt-32">
 		<h2 class="text-3xl font-bold mb-8 text-center">¿A que bloque me inscribo? 🧐</h2>
 		<div class="mx-4 flex flex-col lg:flex-row justify-between gap-4">
 			{#each blocks as block, i}
