@@ -11,9 +11,9 @@
 				<span>El examen no tiene costo adicional</span>
 			</div>
 			<ul class="mt-4 text-sm">
-				<li><b>Horario</b>: Por definir.</li>
+				<li><b>Horario</b>: 7pm</li>
 				<li><b>Lugar</b>: Bóveda Secreta</li>
-				<li><b>Duración aprox</b>: 4-5 horas</li>
+				<li><b>Duración aprox</b>: 2 a 3 horas</li>
 			</ul>
 			<div class="text-sm">
 				Para rendirlo sólo deben contar con un plan activo y haber cursado 6 meses continuos
