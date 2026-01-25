@@ -12,21 +12,21 @@
       <tbody class="bg-base-100">
         <!-- row 2 -->
         <tr>
-          <th>4 clases al mes</th>
+          <th>4 clases al mes (1 por semana)</th>
           <td>$20.000 CLP</td>
         </tr>
         <!-- row 3 -->
         <tr>
-          <th>8 clases al mes</th>
+          <th>8 clases al mes (2 por semana)</th>
           <td>$30.000 CLP</td>
         </tr>
         <!-- row 4 -->
         <tr>
-          <th>12 clases al mes</th>
+          <th>12 clases al mes (3 por semana)</th>
           <td>$42.000 CLP</td>
         </tr>
         <tr>
-          <th>16 clases al mes</th>
+          <th>16 clases al mes (4 por semana)</th>
           <td>$52.000 CLP</td>
         </tr>
         <tr>
