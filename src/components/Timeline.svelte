@@ -41,10 +41,10 @@
 				title: 'Crudo - Vie. 13 Febrero',
 				details: [],
 				matches: [
-					{ fighter1: 'Diego Bravo', fighter2: 'Danny Picart', winner: 'fighter2' },
-					{ fighter1: 'Glenn Lasso', fighter2: 'Dan Gazzete', winner: 'fighter1' },
+					{ fighter1: 'Diego Bravo', fighter2: 'Dani Picart', winner: 'fighter2' },
+					{ fighter1: 'Glenn Lazzo', fighter2: 'Dan Gazzete', winner: 'fighter1' },
 					{ fighter1: 'Indigo', fighter2: 'Cachi', winner: 'fighter2' },
-					{ fighter1: 'Weber', fighter2: 'Sadrak', winner: 'fighter1' },
+					{ fighter1: 'Weber', fighter2: 'Sadrac', winner: 'fighter1' },
 					{ fighter1: 'Destello', fighter2: 'Anderson Cage', winner: 'fighter2' }
 				],
 				description: null
