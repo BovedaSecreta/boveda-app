@@ -1,0 +1,15 @@
+diff --git a/src/runtime/server/page/render.js b/src/runtime/server/page/render.js
+index 0fbfbb24c992eb2a6ece97ba119b4fa4e82be4f1..c2900f70d07ee415aa9f37d16dc48b09fd05493a 100644
+--- a/src/runtime/server/page/render.js
++++ b/src/runtime/server/page/render.js
+@@ -280,7 +280,9 @@ export async function render_response({
+ 						return;
+ 					}
+ 
+-					inline_styles.set(filename, css(`${assets}/${paths.app_dir}/immutable/assets`, assets));
++					if (typeof css === 'function') {
++						inline_styles.set(filename, css(`${assets}/${paths.app_dir}/immutable/assets`, assets));
++					}
+ 				});
+ 			}
+ 		}
