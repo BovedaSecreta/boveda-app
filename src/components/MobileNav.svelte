@@ -1,16 +1,16 @@
 <script>
 	// NAVBAR MOBILE
-	import { fade, fly, slide } from 'svelte/transition';
+	import { fly } from 'svelte/transition';
 	import { spring } from 'svelte/motion';
 	import { onMount } from 'svelte';
 	import { goto } from '$app/navigation';
 
-	let isOpen = false;
+	let isOpen = $state(false);
 	let startY;
 	let currentY;
 	const sheetHeight = spring(100, { stiffness: 0.1, damping: 0.7 });
 
-	let navItems = [
+	let navItems = $state([
 		{
 			name: 'Bloques',
 			link: '/#blocks',
@@ -46,7 +46,7 @@
          <svg class="h-10 w-10" viewBox="0 0 1200 1200" xmlns="http://www.w3.org/2000/svg"><path d="M263 581H104l-7 38h165zM300 431H132l-7 38h175zM463 206H150v113h285zm-238 75h-37v-37h37zm94 0h-38v-37h38zm94 0h-38v-37h38zM938 619h165l-7-38H937zM900 469h175l-7-38H900z" fill="#08001a"/><path d="M859 713h262l-11-57H919a19 19 0 0 1-19-19v-75a19 19 0 0 1 19-18h170l-7-38H881a19 19 0 0 1-19-19v-75a19 19 0 0 1 19-18h179l-7-38H774zM1050 319V206H737l28 113zm-75-75h38v37h-38zm-94 0h38v37h-38zm-93 0h37v37h-37zM621 515l-21-42-21 42c-2 5-7 8-12 9l-43 11 33 33c5 5 7 11 5 18l-9 34 38-19c5-3 12-3 17 0l39 20-9-35c-2-7 0-13 5-18l33-33-43-11c-5-1-10-4-12-9z" fill="#08001a"/><path d="M821 715 698 206H502L379 715a131 131 0 0 1 109 129v169h225V844a131 131 0 0 1 108-129zM525 244h131a19 19 0 0 1 19 15l18 93-36 8-16-79H525zm201 294-49 49 16 65a19 19 0 0 1-27 21l-66-35-66 35a19 19 0 0 1-27-21l16-65-49-49a19 19 0 0 1 9-31l67-17 33-67a20 20 0 0 1 34 0l33 67 67 17a19 19 0 0 1 9 31z" fill="#08001a"/><path d="M356 750H114l336 244V844a94 94 0 0 0-94-94zM750 844v150l336-244H844a94 94 0 0 0-94 94zM426 356H147l-7 38h179a19 19 0 0 1 19 19v75a19 19 0 0 1-19 18H118l-7 38h170a19 19 0 0 1 19 19v75a19 19 0 0 1-19 18H90l-11 57h262z" fill="#08001a"/></svg>
         `
 		}
-	];
+	]);
 
 	function toggleSubItems(index) {
 		navItems = navItems.map((item, i) => {
@@ -113,9 +113,9 @@
 	<nav
 		class="fixed inset-x-0 bottom-0 z-50 pattern"
 		style="height: {$sheetHeight}dvh;"
-		on:touchstart={handleTouchStart}
-		on:touchmove={handleTouchMove}
-		on:touchend={handleTouchEnd}
+		ontouchstart={handleTouchStart}
+		ontouchmove={handleTouchMove}
+		ontouchend={handleTouchEnd}
 		transition:fly={{ y: 200, duration: 300 }}
 	>
 		<div class="cursor-grab active:cursor-grabbing">
@@ -125,6 +125,7 @@
 					fill="none"
 					viewBox="0 0 24 24"
 					stroke="currentColor"
+					aria-hidden="true"
 				>
 					<path
 						stroke-linecap="round"
@@ -134,11 +135,11 @@
 					/>
 				</svg>
 				<button
-					on:click={closeSheet}
+					onclick={closeSheet}
 					class="p-2 absolute right-2 text-neutral focus:outline-hidden focus:ring-2 focus:ring-inset focus:ring-indigo-500"
-					aria-label="Close menu"
+					aria-label="Cerrar menú"
 				>
-					<svg class="h-10 w-10'" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+					<svg class="h-10 w-10" stroke="currentColor" fill="none" viewBox="0 0 24 24" aria-hidden="true">
 						<path
 							stroke-linecap="round"
 							stroke-linejoin="round"
@@ -158,7 +159,8 @@
 								<a
 									class="font-ibm text-neutral font-bold text-3xl mask flex gap-2 items-center"
 									href={item.link}
-									on:click|preventDefault={() => {
+									onclick={(e) => {
+										e.preventDefault();
 										if (item.subItems) {
 											toggleSubItems(index);
 										} else {
@@ -177,7 +179,7 @@
 												<a
 													class="font-ibm text-white text-3xl mask"
 													href={subItem.link}
-													on:click|preventDefault={() => handleNavigation(subItem.link)}
+													onclick={(e) => { e.preventDefault(); handleNavigation(subItem.link); }}
 												>
 													{subItem.name}
 												</a>
@@ -187,22 +189,22 @@
 								{/if}
 							</li>
 						{/each}
-						<li class=" mask flex gap-2 items-center">
+						<li class="mask flex gap-2 items-center">
 							<button
 								class="flex gap-2 items-center"
-								on:click={() => closeSheet()}
+								onclick={() => closeSheet()}
 								data-tally-open="wdbPAK"
 								data-tally-emoji-text="👋"
 								data-tally-emoji-animation="wave"
 							>
-								<svg class="h-10 w-10" viewBox="0 0 1200 1200" xmlns="http://www.w3.org/2000/svg"
+								<svg class="h-10 w-10" viewBox="0 0 1200 1200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
 									><path
 										d="M466 143c5 20-25 28-31 8l-18-68c-5-20 25-28 30-8zm213 9c-6 20-36 12-31-8l18-69c6-20 36-11 31 8zm180 113c-15 15-37-7-23-22l50-50c15-14 37 8 23 22zM493 370l41-51-40-30c-34-26-74 25-39 52zm-61 75-35-27c-33-24 1-77 39-52l37 28zm-61 75 41-50-34-27c-35-26-74 27-40 53l33 24zm336 223L563 925c-13 15-27 25-42 32-41 19-56 5-66 18l-123 148L83 927l148-184c3-3 4-8 4-12-14-83 11-167 69-227 9 15 32 29 47 41l-28 35c-13 16 11 36 24 20l101-124c41-54 94-114 137-169 18-24 46-13 56 5 22 35-43 60-16 80 16 13 27-10 39-25 17-24 45-14 57 4 21 36-43 60-17 80 16 13 28-10 39-25 13-17 32-17 47-6 31 24 5 50-9 68-13 17 12 36 25 19 14-19 25-40 50-33 22 7 40 32 22 55l-41 52-101-75-9-3H610c-83-10-95 118-11 125l87 21c0 33 7 65 22 94zm410 156L946 766c-7-5-79-122-85-128L721 535l-114-1c-33-3-59 49-2 63l101 25c8 2 13 9 12 17-5 63 25 124 79 158 17 11 0 37-17 26-22-13-40-31-55-51L596 933c49 47 119 91 184 91 4 0 7 1 10 4l139 108zM277 242c15 15-7 37-22 23l-50-50c-15-15 8-37 22-23z"
 										fill="#08001a"
 										fill-rule="evenodd"
 									/></svg
 								>
-								<span class="font-bold text-neutral text-3xl">Incripción</span>
+								<span class="font-bold text-neutral text-3xl">Inscripción</span>
 							</button>
 						</li>
 					</ul>

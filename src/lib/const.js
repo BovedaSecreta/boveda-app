@@ -1,3 +1,51 @@
+export const faq = [
+	{
+		question: '¿Qué necesito para inscribirme?',
+		answer:
+			'Primero, asegúrate de estar en condiciones de salud aptas para la práctica de ejercicio físico y esta disciplina de combate. Luego, simplemente llena el formulario en este enlace, y te contactaremos por WhatsApp para confirmar tu asistencia a los entrenamientos que elijas. Así, te guiaremos en el proceso de inscripción de clases. ¡Es fácil y rápido!'
+	},
+	{
+		question: '¿Desde que edad puedo inscribirme?',
+		answer:
+			'La edad mínima es de 16 años con documento de autorización explícita de su tutor para la práctica de esta disciplina.'
+	},
+	{
+		question: '¿Cómo me inscribo a una clase única?',
+		answer:
+			'Puedes inscribirte en el formulario que se encuentra al hacer click en el botón "Me quiero inscribir", como también contactarnos directamente a través del botón de Whatsapp.'
+	},
+	{
+		question: '¿Qué necesito para entrenar?',
+		answer:
+			'Recomendamos ropa limpia, cómoda y ligera. La polera deberá contar con mangas (cortas o largas). Considera una polera extra para recambio. Se requiere calzado específico para entrenamiento distinto al de calle. Rodilleras, coderas y bucal son recomendadas pero no obligatorias.'
+	},
+	{
+		question: '¿Tienen duchas en la Bóveda?',
+		answer:
+			'La Bóveda cuenta con baños y camarines operativos para hombres y mujeres, con todos los servicios higiénicos necesarios y duchas con agua caliente habilitadas todo el año. No incluye artículos de baño ni toallas.'
+	},
+	{
+		question: '¿Qué pasa si llego tarde a un entrenamiento?',
+		answer:
+			'El límite para sumarte a un entrenamiento es de 15 minutos. Pasado ese tiempo te perderás parte esencial para el desarrollo correcto del resto del programa de la clase y pone en riesgo tu bienestar físico y el de tus compañeros.'
+	},
+	{
+		question: '¿Qué pasa si no ocupo mis clases durante el mes que me inscribí?',
+		answer:
+			'Las clases tienen un (1) mes de validez a partir del día de tu inscripción, las perderás si no las ocupas según el plan que solicitaste.'
+	},
+	{
+		question: '¿Puedo ir en bicicleta?',
+		answer:
+			'Si, la Bóveda cuenta con suficiente espacio para tu bici, sin embargo, es responsabilidad de sus propietarios y no nos hacemos responsables por pérdidas o deterioros de la misma.'
+	},
+	{
+		question: '¿Tienen estacionamiento para autos o motos en la Bóveda?',
+		answer:
+			'No, la Bóveda ni la galería Nueva Copacabana cuentan con estacionamientos disponibles para vehículos motorizados.'
+	}
+];
+
 export let coaches = [
     {
         status: true,
