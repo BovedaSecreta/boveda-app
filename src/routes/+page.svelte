@@ -37,11 +37,11 @@
 	<Nav />
 	<section class="relative">
 		<Hero />
-		<div
+		<!-- <div
 			class="absolute md:w-8/12 lg:w-6/12 -bottom-20 md:-bottom-16 right-[50%] translate-x-[50%] w-full z-20"
 		>
 			<Callout />
-		</div>
+		</div> -->
 	</section>
 	<section class="container mx-auto p-4 mt-32 flex content-center flex-col">
 		<h2 class="text-3xl font-bold mb-8 text-center">Fechas especiales 2026</h2>

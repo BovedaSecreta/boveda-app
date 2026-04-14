@@ -1,28 +1,16 @@
 <script>
-	import { onDestroy, onMount } from 'svelte';
 	import MobileNavMenu from './MobileNav.svelte';
 
-	let mobileNavMenu;
+	let mobileNavMenu = $state();
+	let isScrolled = $state(false);
 
-	let isScrolled = false;
-
-	// Function to handle scroll event
 	const handleScroll = () => {
 		isScrolled = window.scrollY > 60;
 	};
 
-	// Add scroll event listener on mount
-	onMount(() => {
-		if (typeof window !== 'undefined') {
-			window.addEventListener('scroll', handleScroll);
-		}
-	});
-
-	// Remove scroll event listener on destroy
-	onDestroy(() => {
-		if (typeof window !== 'undefined') {
-			window.removeEventListener('scroll', handleScroll);
-		}
+	$effect(() => {
+		window.addEventListener('scroll', handleScroll);
+		return () => window.removeEventListener('scroll', handleScroll);
 	});
 </script>
 
@@ -38,7 +26,7 @@
 		</a>
 		<button
 			id="drawer-button"
-			on:click={() => mobileNavMenu.openSheet()}
+			onclick={() => mobileNavMenu.openSheet()}
 			aria-label="Open menu"
 			class="btn btn-primary drawer-button lg:hidden">Menu</button
 		>
