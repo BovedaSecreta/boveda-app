@@ -25,6 +25,11 @@ body {
     font-family: 'Quicksand', sans-serif;
 }
 
+/* ── Suppress native dialog backdrop (DaisyUI uses its own) ── */
+dialog::backdrop {
+    background: transparent;
+}
+
 /* ── Scroll-reveal ─────────────────────────────────────── */
 .reveal {
     opacity: 0;
