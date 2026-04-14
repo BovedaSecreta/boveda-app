@@ -36,6 +36,7 @@
 		"tailwindcss": "^4.1.4",
 		"vite": "^8.0.8"
 	},
+	"packageManager": "pnpm@10.6.5",
 	"type": "module",
 	"dependencies": {
 		"@sveltejs/kit": "^2.57.1",
