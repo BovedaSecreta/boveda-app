@@ -26,7 +26,7 @@
 		</a>
 		<button
 			id="drawer-button"
-			on:click={() => mobileNavMenu.openSheet()}
+			onclick={() => mobileNavMenu.openSheet()}
 			aria-label="Open menu"
 			class="btn btn-primary drawer-button lg:hidden">Menu</button
 		>

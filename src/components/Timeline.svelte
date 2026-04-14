@@ -54,9 +54,25 @@
 			id: 'abr_1',
 			date: 'Sáb. 11 Abril',
 			label: 'Examen básico/interm.',
-			completed: false,
+			completed: true,
 			modal: {
 				title: 'Examen básico e intermedio - 11 Abril',
+				details: [
+					{ label: 'Horario', value: '10 AM' },
+					{ label: 'Lugar', value: 'Bóveda Secreta' },
+					{ label: 'Duración aprox', value: '3 a 4 horas' },
+					{ label: 'Costo', value: 'Sin costo adicional' }
+				],
+				description: `Para rendir el examen es necesario contar con un plan activo y haber completado al menos 6 meses de entrenamiento continuo en Bóveda Secreta.\n\nEn cuanto a la vestimenta, se recomienda ropa cómoda, polera con mangas y llevar una muda de ropa. También se sugiere traer toalla personal y usar calzado deportivo adecuado, distinto al que se usa para llegar al recinto.\n\nEl examen evalúa las habilidades físicas y de comunicación desarrolladas durante los entrenamientos. La aprobación depende de que el alumno demuestre bases sólidas y esté preparado para recibir información de mayor nivel.`
+			}
+		},
+		{
+			id: 'jun_6',
+			date: 'Sáb. 6 junio',
+			label: 'Examen básico/interm.',
+			completed: false,
+			modal: {
+				title: 'Examen básico e intermedio - 6 de junio',
 				details: [
 					{ label: 'Horario', value: '10 AM' },
 					{ label: 'Lugar', value: 'Bóveda Secreta' },
@@ -72,7 +88,7 @@
 <!-- Modals -->
 {#each events.filter((e) => e.modal) as event}
 	<dialog id={event.id} class="modal modal-bottom sm:modal-middle">
-		<div class="modal-box p-0 overflow-hidden">
+		<div class="modal-box p-0 overflow-y-auto max-h-[80vh]">
 			<!-- Header -->
 			<div class="bg-indigo-900 px-6 py-4">
 				<h3 class="text-lg font-bold text-white">{event.modal.title}</h3>
@@ -149,7 +165,7 @@
 			{#if event.modal}
 				<button
 					class="timeline-end timeline-box btn"
-					onclick={`${event.id}.showModal()`}
+					onclick={() => document.getElementById(event.id).showModal()}
 				><b>{event.label}</b></button>
 			{:else}
 				<div class="timeline-end timeline-box"><b>{event.label}</b></div>
