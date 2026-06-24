@@ -12,14 +12,6 @@
 		"lint": "prettier --check . && eslint .",
 		"format": "prettier --write ."
 	},
-	"pnpm": {
-		"overrides": {
-			"@sveltejs/vite-plugin-svelte": "^4.0.4"
-		},
-		"patchedDependencies": {
-			"@sveltejs/kit@2.57.1": "patches/@sveltejs__kit@2.57.1.patch"
-		}
-	},
 	"devDependencies": {
 		"@sveltejs/adapter-vercel": "^6.3.3",
 		"@sveltejs/vite-plugin-svelte": "^4.0.4",

@@ -1,0 +1,5 @@
+overrides:
+  '@sveltejs/vite-plugin-svelte': ^4.0.4
+
+patchedDependencies:
+  '@sveltejs/kit@2.57.1': patches/@sveltejs__kit@2.57.1.patch

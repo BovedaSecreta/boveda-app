@@ -74,7 +74,7 @@
 			id: 'jun_6',
 			date: 'Sáb. 6 junio',
 			label: 'Examen básico/interm.',
-			completed: false,
+			completed: true,
 			modal: {
 				title: 'Examen básico e intermedio - 6 de junio',
 				details: [
