@@ -2,6 +2,7 @@
 	import { fade, scale } from 'svelte/transition';
 	import { Circle, Clock, MapPin, Timer, Tag } from 'lucide-svelte';
 	import { portal } from '../lib/actions/portal.js';
+	import Button from './Button.svelte';
 
 	let activeEvent = $state(null);
 
@@ -111,7 +112,7 @@
 	>
 		<!-- Header -->
 		<div class="bg-indigo-900 px-6 py-4 shrink-0">
-			<h3 id="modal-title" class="text-lg font-bold text-white">{activeEvent.modal.title}</h3>
+			<h3 id="modal-title" class="text-lg font-extrabold text-white">{activeEvent.modal.title}</h3>
 		</div>
 
 		<div class="px-6 py-4 space-y-4 overflow-y-auto">
@@ -135,17 +136,23 @@
 			{#if activeEvent.modal.matches}
 				<ul class="space-y-2">
 					{#each activeEvent.modal.matches as match (match.fighter1)}
-						<li class="flex items-center justify-between gap-2 text-sm bg-base-200 rounded-lg px-4 py-2">
-							<span class="font-medium text-right flex-1 flex items-center justify-end gap-1
-								{match.winner === 'fighter1' ? '' : match.winner ? 'opacity-40 line-through' : ''}">
+						<li
+							class="flex items-center justify-between gap-2 text-sm bg-base-200 rounded-lg px-4 py-2"
+						>
+							<span
+								class="font-medium text-right flex-1 flex items-center justify-end gap-1
+								{match.winner === 'fighter1' ? '' : match.winner ? 'opacity-40 line-through' : ''}"
+							>
 								{match.fighter1}
 								{#if match.winner === 'fighter1'}
 									<Circle class="h-4 w-4 text-red-500" />
 								{/if}
 							</span>
 							<span class="text-xs font-bold text-indigo-400 shrink-0">VS</span>
-							<div class="font-medium flex-1 flex items-center gap-1
-								{match.winner === 'fighter2' ? '' : match.winner ? 'opacity-40 line-through' : ''}">
+							<div
+								class="font-medium flex-1 flex items-center gap-1
+								{match.winner === 'fighter2' ? '' : match.winner ? 'opacity-40 line-through' : ''}"
+							>
 								{#if match.winner === 'fighter2'}
 									<Circle class="h-4 w-4 text-red-500" />
 								{/if}
@@ -158,14 +165,16 @@
 
 			<!-- Description -->
 			{#if activeEvent.modal.description}
-				<div class="text-sm text-base-content/80 whitespace-pre-line leading-relaxed border-t border-base-200 pt-4">
+				<div
+					class="text-sm text-base-content/80 whitespace-pre-line leading-relaxed border-t border-base-200 pt-4"
+				>
 					{activeEvent.modal.description}
 				</div>
 			{/if}
 		</div>
 
 		<div class="px-6 pb-4 pt-2 shrink-0 flex justify-end">
-			<button class="btn btn-sm btn-ghost" onclick={() => (activeEvent = null)}>Cerrar</button>
+			<Button variant="subtle" size="sm" onclick={() => (activeEvent = null)}>Cerrar</Button>
 		</div>
 	</div>
 {/if}
@@ -173,16 +182,25 @@
 <ul class="timeline timeline-vertical lg:timeline-horizontal mx-auto">
 	{#each events as event}
 		<li>
-			<hr class={event.completed ? 'bg-indigo-800' : ''}/>
+			<hr class={event.completed ? 'bg-indigo-800' : ''} />
 			<div class="timeline-start">{event.date}</div>
 			<div class="timeline-middle">
-				<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="h-5 w-5 {event.completed ? 'text-emerald-500' : ''}" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 1 0 0-16 8 8 0 0 0 0 16m3.857-9.809a.75.75 0 0 0-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 1 0-1.06 1.061l2.5 2.5a.75.75 0 0 0 1.137-.089z" clip-rule="evenodd"/></svg>
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					fill="currentColor"
+					class="h-5 w-5 {event.completed ? 'text-emerald-500' : ''}"
+					viewBox="0 0 20 20"
+					><path
+						fill-rule="evenodd"
+						d="M10 18a8 8 0 1 0 0-16 8 8 0 0 0 0 16m3.857-9.809a.75.75 0 0 0-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 1 0-1.06 1.061l2.5 2.5a.75.75 0 0 0 1.137-.089z"
+						clip-rule="evenodd"
+					/></svg
+				>
 			</div>
 			{#if event.modal}
-				<button
-					class="timeline-end timeline-box btn"
-					onclick={() => (activeEvent = event)}
-				><b>{event.label}</b></button>
+				<button class="timeline-end timeline-box btn" onclick={() => (activeEvent = event)}
+					><b>{event.label}</b></button
+				>
 			{:else}
 				<div class="timeline-end timeline-box"><b>{event.label}</b></div>
 			{/if}

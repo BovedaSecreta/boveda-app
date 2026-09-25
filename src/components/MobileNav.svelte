@@ -139,7 +139,13 @@
 					class="p-2 absolute right-2 text-neutral focus:outline-hidden focus:ring-2 focus:ring-inset focus:ring-indigo-500"
 					aria-label="Cerrar menú"
 				>
-					<svg class="h-10 w-10" stroke="currentColor" fill="none" viewBox="0 0 24 24" aria-hidden="true">
+					<svg
+						class="h-10 w-10"
+						stroke="currentColor"
+						fill="none"
+						viewBox="0 0 24 24"
+						aria-hidden="true"
+					>
 						<path
 							stroke-linecap="round"
 							stroke-linejoin="round"
@@ -157,7 +163,7 @@
 						{#each navItems as item, index}
 							<li class="my-6">
 								<a
-									class="font-ibm text-neutral font-bold text-3xl mask flex gap-2 items-center"
+									class="font-display font-extrabold font-stretch-[86%] italic text-neutral text-3xl mask flex gap-2 items-center"
 									href={item.link}
 									onclick={(e) => {
 										e.preventDefault();
@@ -177,9 +183,12 @@
 											<li class="my-6 flex gap-2 items-center">
 												{@html subItem.icon}
 												<a
-													class="font-ibm text-white text-3xl mask"
+													class="font-display font-semibold font-stretch-[86%] italic text-white text-3xl mask"
 													href={subItem.link}
-													onclick={(e) => { e.preventDefault(); handleNavigation(subItem.link); }}
+													onclick={(e) => {
+														e.preventDefault();
+														handleNavigation(subItem.link);
+													}}
 												>
 													{subItem.name}
 												</a>
@@ -197,14 +206,21 @@
 								data-tally-emoji-text="👋"
 								data-tally-emoji-animation="wave"
 							>
-								<svg class="h-10 w-10" viewBox="0 0 1200 1200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+								<svg
+									class="h-10 w-10"
+									viewBox="0 0 1200 1200"
+									xmlns="http://www.w3.org/2000/svg"
+									aria-hidden="true"
 									><path
 										d="M466 143c5 20-25 28-31 8l-18-68c-5-20 25-28 30-8zm213 9c-6 20-36 12-31-8l18-69c6-20 36-11 31 8zm180 113c-15 15-37-7-23-22l50-50c15-14 37 8 23 22zM493 370l41-51-40-30c-34-26-74 25-39 52zm-61 75-35-27c-33-24 1-77 39-52l37 28zm-61 75 41-50-34-27c-35-26-74 27-40 53l33 24zm336 223L563 925c-13 15-27 25-42 32-41 19-56 5-66 18l-123 148L83 927l148-184c3-3 4-8 4-12-14-83 11-167 69-227 9 15 32 29 47 41l-28 35c-13 16 11 36 24 20l101-124c41-54 94-114 137-169 18-24 46-13 56 5 22 35-43 60-16 80 16 13 27-10 39-25 17-24 45-14 57 4 21 36-43 60-17 80 16 13 28-10 39-25 13-17 32-17 47-6 31 24 5 50-9 68-13 17 12 36 25 19 14-19 25-40 50-33 22 7 40 32 22 55l-41 52-101-75-9-3H610c-83-10-95 118-11 125l87 21c0 33 7 65 22 94zm410 156L946 766c-7-5-79-122-85-128L721 535l-114-1c-33-3-59 49-2 63l101 25c8 2 13 9 12 17-5 63 25 124 79 158 17 11 0 37-17 26-22-13-40-31-55-51L596 933c49 47 119 91 184 91 4 0 7 1 10 4l139 108zM277 242c15 15-7 37-22 23l-50-50c-15-15 8-37 22-23z"
 										fill="#08001a"
 										fill-rule="evenodd"
 									/></svg
 								>
-								<span class="font-bold text-neutral text-3xl">Inscripción</span>
+								<span
+									class="font-display font-extrabold font-stretch-[86%] italic text-neutral text-3xl"
+									>Inscripción</span
+								>
 							</button>
 						</li>
 					</ul>
@@ -226,7 +242,8 @@
 	}
 
 	.pattern {
-		background: linear-gradient(45deg, #ffffff 25%, transparent 25%),
+		background:
+			linear-gradient(45deg, #ffffff 25%, transparent 25%),
 			linear-gradient(315deg, #ffffff 25%, transparent 25%),
 			linear-gradient(
 				45deg,

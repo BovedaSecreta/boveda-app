@@ -1,5 +1,5 @@
 <div id="precios" class="md:mx-auto w-full md:w-8/12 scroll-mt-32">
-<h2 class="text-3xl font-bold mb-8">💰 Precios</h2>
+<h2 class="text-3xl font-extrabold mb-8">💰 Precios</h2>
 <div class="overflow-x-auto shadow-xl card ">
     <table class="table w-full">
       <!-- head -->

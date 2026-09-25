@@ -3,6 +3,13 @@
   themes: bumblebee --default;
 }
 
+/* Display voice: buttons and both menus. Replaces the never-defined `font-ibm`. */
+@theme {
+  --font-display: 'Archivo', system-ui, sans-serif;
+  /* The site's near-black. Also available as bg-ink / text-ink / border-ink. */
+  --color-ink: #08001b;
+}
+
 /*
   The default border color has changed to `currentcolor` in Tailwind CSS v4,
   so we've added these compatibility styles to make sure everything still
@@ -25,6 +32,21 @@ body {
     font-family: 'Quicksand', sans-serif;
 }
 
+/* Headings share the button/menu display voice. Sentence case is kept:
+   uppercase would wreck long Spanish headings like "¿A que bloque me inscribo?".
+   In @layer base so per-heading utilities (font-medium, not-italic, …) still win. */
+@layer base {
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-stretch: 86%;
+    /* Barely any: the 86% width axis already tightens these, and the emoji
+       several headings open with crowd the first cap if tracking goes lower. */
+    letter-spacing: -0.005em;
+    text-wrap: balance;
+  }
+}
+
 /* ── Suppress native dialog backdrop (DaisyUI uses its own) ── */
 dialog::backdrop {
     background: transparent;
@@ -45,28 +67,6 @@ dialog::backdrop {
     transform: translateY(0);
 }
 
-/* ── Hero staggered entrance ───────────────────────────── */
-@keyframes fadeUp {
-    from {
-        opacity: 0;
-        transform: translateY(28px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.hero-animate {
-    opacity: 0;
-    animation: fadeUp 0.7s ease forwards;
-}
-
-.hero-delay-1 { animation-delay: 0.1s; }
-.hero-delay-2 { animation-delay: 0.3s; }
-.hero-delay-3 { animation-delay: 0.5s; }
-.hero-delay-4 { animation-delay: 0.7s; }
-
 @media (prefers-reduced-motion: reduce) {
     *,
     *::before,
@@ -77,8 +77,7 @@ dialog::backdrop {
         scroll-behavior: auto !important;
     }
 
-    .reveal,
-    .hero-animate {
+    .reveal {
         opacity: 1 !important;
         transform: none !important;
         transition: none !important;
