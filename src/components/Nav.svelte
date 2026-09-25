@@ -32,22 +32,29 @@
 		>
 		<div class="flex-none hidden lg:flex">
 			<nav class="menu menu-horizontal px-1 gap-2">
-				<a class="btn btn-link font-ibm font-black text-xl italic normal-case" href="/#blocks"
-					>¿A que bloque me inscribo?</a
+				<a
+					class="btn btn-link font-display font-extrabold font-stretch-[86%] text-xl italic normal-case"
+					href="/#blocks">¿A que bloque me inscribo?</a
 				>
-				<a class="btn btn-link font-ibm font-black text-xl italic normal-case" href="/#profesores"
-					>Instructor/a</a
+				<a
+					class="btn btn-link font-display font-extrabold font-stretch-[86%] text-xl italic normal-case"
+					href="/#profesores">Instructor/a</a
 				>
-				<a class="btn btn-link font-ibm font-black text-xl italic normal-case" href="/#horarios"
-					>Horarios</a
+				<a
+					class="btn btn-link font-display font-extrabold font-stretch-[86%] text-xl italic normal-case"
+					href="/#horarios">Horarios</a
 				>
-				<a class="btn btn-link font-ibm font-black text-xl italic normal-case" href="/#precios"
-					>Precios</a
+				<a
+					class="btn btn-link font-display font-extrabold font-stretch-[86%] text-xl italic normal-case"
+					href="/#precios">Precios</a
 				>
-				<a class="btn btn-link font-ibm font-black text-xl italic normal-case" href="/#faq">FAQ</a>
+				<a
+					class="btn btn-link font-display font-extrabold font-stretch-[86%] text-xl italic normal-case"
+					href="/#faq">FAQ</a
+				>
 
 				<button
-					class="btn text-terciary font-ibm font-black text-xl italic normal-case"
+					class="btn text-terciary font-display font-extrabold font-stretch-[86%] text-xl italic normal-case"
 					data-tally-open="wdbPAK"
 					data-tally-overlay="1"
 					data-tally-emoji-text="👋"

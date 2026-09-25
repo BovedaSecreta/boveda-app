@@ -55,11 +55,6 @@
 			<Callout />
 		</div> -->
 	</section>
-<section use:intersect={{ delay: 100 }} class="max-w-6xl mx-auto md:mt-20 md:px-4">
-<a target="_blank" href="https://www.1000holds.com/boveda">
-	<Banner/>
-	</a>
-</section>
 	<!-- <section use:intersect class="container mx-auto p-4 mt-32 flex content-center flex-col">
 		<h2 class="text-3xl font-bold mb-8 text-center">Fechas especiales 2026</h2>
 		<Timeline />

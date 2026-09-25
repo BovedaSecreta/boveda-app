@@ -3,6 +3,11 @@
   themes: bumblebee --default;
 }
 
+/* Display voice: hero CTAs and both menus. Replaces the never-defined `font-ibm`. */
+@theme {
+  --font-display: 'Archivo', system-ui, sans-serif;
+}
+
 /*
   The default border color has changed to `currentcolor` in Tailwind CSS v4,
   so we've added these compatibility styles to make sure everything still
@@ -45,28 +50,6 @@ dialog::backdrop {
     transform: translateY(0);
 }
 
-/* ── Hero staggered entrance ───────────────────────────── */
-@keyframes fadeUp {
-    from {
-        opacity: 0;
-        transform: translateY(28px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.hero-animate {
-    opacity: 0;
-    animation: fadeUp 0.7s ease forwards;
-}
-
-.hero-delay-1 { animation-delay: 0.1s; }
-.hero-delay-2 { animation-delay: 0.3s; }
-.hero-delay-3 { animation-delay: 0.5s; }
-.hero-delay-4 { animation-delay: 0.7s; }
-
 @media (prefers-reduced-motion: reduce) {
     *,
     *::before,
@@ -77,8 +60,7 @@ dialog::backdrop {
         scroll-behavior: auto !important;
     }
 
-    .reveal,
-    .hero-animate {
+    .reveal {
         opacity: 1 !important;
         transform: none !important;
         transition: none !important;
