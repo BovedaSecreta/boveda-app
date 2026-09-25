@@ -56,18 +56,18 @@
 		</div> -->
 	</section>
 	<!-- <section use:intersect class="container mx-auto p-4 mt-32 flex content-center flex-col">
-		<h2 class="text-3xl font-bold mb-8 text-center">Fechas especiales 2026</h2>
+		<h2 class="text-3xl font-extrabold mb-8 text-center">Fechas especiales 2026</h2>
 		<Timeline />
 	</section> -->
 	<div id="blocks" use:intersect class="container mx-auto my-6 mt-10 md:mt-28 scroll-mt-32">
-		<h2 class="text-3xl font-bold mb-8 text-center">¿A que bloque me inscribo? 🧐</h2>
+		<h2 class="text-3xl font-extrabold mb-8 text-center">¿A que bloque me inscribo? 🧐</h2>
 		<div class="mx-4 flex flex-col lg:flex-row justify-between gap-4">
 			{#each blocks as block, i}
 				<Bloque info={block} />
 			{/each}
 		</div>
 		<div id="profesores" use:intersect class="my-20 scroll-mt-32">
-			<h2 class="text-3xl font-bold mx-4 mb-4 mt-10">🤼‍♀️ Instructor/a</h2>
+			<h2 class="text-3xl font-extrabold mx-4 mb-4 mt-10">🤼‍♀️ Instructor/a</h2>
 			<div class="flex gap-10 mt-8 mx-4 flex-col lg:flex-row">
 				{#each activeCoaches as coach, i}
 					<Profe {coach} />

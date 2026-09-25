@@ -14,7 +14,7 @@
 
 <section id="faq" class="w-full text-white py-10 pattern scroll-mt-20">
 	<div class="container mx-auto pb-10">
-		<h2 class="text-3xl font-bold text-center">🧐 Preguntas Frecuentes</h2>
+		<h2 class="text-3xl font-extrabold text-center">🧐 Preguntas Frecuentes</h2>
 	</div>
 	<div class="max-w-2xl mx-auto">
 		{#each faq as item, index}

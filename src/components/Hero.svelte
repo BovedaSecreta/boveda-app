@@ -1,3 +1,7 @@
+<script>
+	import Button from './Button.svelte';
+</script>
+
 <svelte:head>
 	<link rel="preload" as="image" href="/logo-web.png" fetchpriority="high" />
 	<link rel="preload" as="image" href="/hero-poster.webp" />
@@ -52,14 +56,15 @@
 		</p>
 
 		<div class="hero__actions">
-			<button
+			<Button
+				variant="primary"
+				size="lg"
 				data-tally-open="wdbPAK"
 				data-tally-overlay="1"
 				data-tally-emoji-text="👋"
-				data-tally-emoji-animation="wave"
-				class="hero__cta hero__cta--primary">Me quiero inscribir</button
+				data-tally-emoji-animation="wave">Me quiero inscribir</Button
 			>
-			<a href="/#blocks" class="hero__cta hero__cta--ghost">Más información</a>
+			<Button variant="ghost" size="lg" href="/#blocks">Más información</Button>
 		</div>
 
 		<div class="hero__social">
@@ -240,70 +245,6 @@
 		width: 100%;
 		max-width: 26rem;
 		margin-top: 2.25rem;
-	}
-
-	.hero__cta {
-		display: inline-flex;
-		align-items: center;
-		justify-content: center;
-		padding: 1.15rem 2.1rem;
-		border: 1px solid transparent;
-		border-radius: 3px;
-		font-family: var(--font-display);
-		font-size: clamp(0.9rem, 0.82rem + 0.35vw, 1.06rem);
-		font-style: italic;
-		font-weight: 800;
-		font-stretch: 86%;
-		line-height: 1;
-		letter-spacing: 0.045em;
-		text-transform: uppercase;
-		text-decoration: none;
-		cursor: pointer;
-		transition:
-			transform 220ms var(--ease),
-			background-color 220ms var(--ease),
-			border-color 220ms var(--ease),
-			box-shadow 220ms var(--ease),
-			color 220ms var(--ease);
-	}
-
-	.hero__cta--primary {
-		background: var(--accent);
-		color: var(--ink);
-		box-shadow:
-			0 12px 26px -12px rgba(0, 0, 0, 0.9),
-			0 3px 8px -4px rgba(0, 0, 0, 0.6);
-	}
-	.hero__cta--primary:hover {
-		transform: translateY(-3px);
-		box-shadow:
-			0 22px 40px -14px rgba(0, 0, 0, 0.95),
-			0 6px 14px -6px rgba(0, 0, 0, 0.65);
-	}
-	.hero__cta--primary:active {
-		transform: translateY(-1px);
-	}
-	.hero__cta--primary:focus-visible {
-		outline: 2px solid #fff;
-		outline-offset: 3px;
-	}
-
-	.hero__cta--ghost {
-		background: rgba(255, 255, 255, 0.05);
-		border-color: rgba(255, 255, 255, 0.35);
-		color: #fff;
-	}
-	.hero__cta--ghost:hover {
-		transform: translateY(-3px);
-		background: rgba(255, 255, 255, 0.12);
-		border-color: #fff;
-	}
-	.hero__cta--ghost:active {
-		transform: translateY(-1px);
-	}
-	.hero__cta--ghost:focus-visible {
-		outline: 2px solid var(--accent);
-		outline-offset: 3px;
 	}
 
 	.hero__social {

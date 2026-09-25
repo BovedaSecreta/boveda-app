@@ -1,5 +1,6 @@
 <script>
 	import MobileNavMenu from './MobileNav.svelte';
+	import Button from './Button.svelte';
 
 	let mobileNavMenu = $state();
 	let isScrolled = $state(false);
@@ -24,41 +25,42 @@
 		<a href="/">
 			<img src="/favicon.png" class="w-12" width="112" height="63" alt="Isotipo Bóveda Secreta" />
 		</a>
-		<button
+		<Button
 			id="drawer-button"
+			size="sm"
 			onclick={() => mobileNavMenu.openSheet()}
 			aria-label="Open menu"
-			class="btn btn-primary drawer-button lg:hidden">Menu</button
+			class="drawer-button lg:hidden">Menu</Button
 		>
 		<div class="flex-none hidden lg:flex">
 			<nav class="menu menu-horizontal px-1 gap-2">
 				<a
-					class="btn btn-link font-display font-extrabold font-stretch-[86%] text-xl italic normal-case"
+					class="btn btn-link no-underline hover:no-underline hover:text-white transition-colors font-display font-extrabold font-stretch-[86%] text-xl italic normal-case"
 					href="/#blocks">¿A que bloque me inscribo?</a
 				>
 				<a
-					class="btn btn-link font-display font-extrabold font-stretch-[86%] text-xl italic normal-case"
+					class="btn btn-link no-underline hover:no-underline hover:text-white transition-colors font-display font-extrabold font-stretch-[86%] text-xl italic normal-case"
 					href="/#profesores">Instructor/a</a
 				>
 				<a
-					class="btn btn-link font-display font-extrabold font-stretch-[86%] text-xl italic normal-case"
+					class="btn btn-link no-underline hover:no-underline hover:text-white transition-colors font-display font-extrabold font-stretch-[86%] text-xl italic normal-case"
 					href="/#horarios">Horarios</a
 				>
 				<a
-					class="btn btn-link font-display font-extrabold font-stretch-[86%] text-xl italic normal-case"
+					class="btn btn-link no-underline hover:no-underline hover:text-white transition-colors font-display font-extrabold font-stretch-[86%] text-xl italic normal-case"
 					href="/#precios">Precios</a
 				>
 				<a
-					class="btn btn-link font-display font-extrabold font-stretch-[86%] text-xl italic normal-case"
+					class="btn btn-link no-underline hover:no-underline hover:text-white transition-colors font-display font-extrabold font-stretch-[86%] text-xl italic normal-case"
 					href="/#faq">FAQ</a
 				>
 
-				<button
-					class="btn text-terciary font-display font-extrabold font-stretch-[86%] text-xl italic normal-case"
+				<Button
+					size="sm"
 					data-tally-open="wdbPAK"
 					data-tally-overlay="1"
 					data-tally-emoji-text="👋"
-					data-tally-emoji-animation="wave">Inscripción</button
+					data-tally-emoji-animation="wave">Inscripción</Button
 				>
 			</nav>
 		</div>

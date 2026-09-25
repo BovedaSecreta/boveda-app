@@ -3,9 +3,11 @@
   themes: bumblebee --default;
 }
 
-/* Display voice: hero CTAs and both menus. Replaces the never-defined `font-ibm`. */
+/* Display voice: buttons and both menus. Replaces the never-defined `font-ibm`. */
 @theme {
   --font-display: 'Archivo', system-ui, sans-serif;
+  /* The site's near-black. Also available as bg-ink / text-ink / border-ink. */
+  --color-ink: #08001b;
 }
 
 /*
@@ -28,6 +30,21 @@
 
 body {
     font-family: 'Quicksand', sans-serif;
+}
+
+/* Headings share the button/menu display voice. Sentence case is kept:
+   uppercase would wreck long Spanish headings like "¿A que bloque me inscribo?".
+   In @layer base so per-heading utilities (font-medium, not-italic, …) still win. */
+@layer base {
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-stretch: 86%;
+    /* Barely any: the 86% width axis already tightens these, and the emoji
+       several headings open with crowd the first cap if tracking goes lower. */
+    letter-spacing: -0.005em;
+    text-wrap: balance;
+  }
 }
 
 /* ── Suppress native dialog backdrop (DaisyUI uses its own) ── */
