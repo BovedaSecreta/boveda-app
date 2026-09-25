@@ -50,7 +50,7 @@ export let coaches = [
     {
         status: true,
         name: 'Zatara',
-        img: '/zatara.jpg',
+        img: '/coaches/zatara.avif',
         description:
             'Luchadora Chilena con más de 15 años de experiencia y diferentes reconocimientos y logros a nivel local e internacional.<br><br>El 2018 se presenta por primera vez en la Arena México, además de ser seleccionada para participar del Torneo “Mae Young Classic” de WWE y el Tryout Latinoamericano realizado en Chile por la misma empresa.  <br><br> <b>Ha trabajado para empresas como: </b>5 Luchas Clandestino, WWE`s Mae Young Classic Tournament, WWE Latin American try out, Dragonmania, Imperio Lucha Libre, Brazilian Wrestling Federation, Revolución Lucha Libre, entre otras.',
         igLink: 'https://www.instagram.com/zatara.cabrona/',
@@ -85,7 +85,7 @@ export let coaches = [
     {
         status: true,
         name: 'Owen Kampos',
-        img: '/owen.webp',
+        img: '/coaches/owen.avif',
         description:
             'Luchador profesional con más de 11 años de trayectoria en la lucha libre nacional. Su amplio conocimiento y experiencia lo han convertido en un referente clave para las nuevas generaciones de luchadores y luchadoras. <br><br><b>Ha trabajado para empresas como: </b>5 Luchas Clandestino, Xtreme Club, Revolución Lucha Libre, entre otras.',
         igLink: 'https://www.instagram.com/owenkampos/',
@@ -94,7 +94,7 @@ export let coaches = [
     {
         status: true,
         name: 'Mauri Parker',
-        img: '/mauri.webp',
+        img: '/coaches/mauri.avif',
         description:
             'Exalumno del Yeyos Dojo y actual luchador consolidado en 5 Luchas Clandestino. Su disciplina y constancia lo han posicionado como un referente en los fundamentos de esta disciplina, mientras que su carisma inspira y motiva a quienes lo rodean.<br><br>  <b>Ha trabajado para empresas como: </b>5 Luchas Clandestino, Xtreme Club, entre otras.',
         igLink: 'https://www.instagram.com/mauriparker.wrestler/',
